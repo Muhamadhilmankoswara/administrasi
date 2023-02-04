@@ -35,9 +35,25 @@ Route::post('/surat/update','SuratController@update');
 
 Route::get('/surat/hapus/{id}','SuratController@hapus');
 
+//route CRUD
+Route::get('/keluar','KeluarController@index');
 
+Route::get('/keluar/tambahh','KeluarController@tambahh');
+
+Route::post('/keluar/storee','KeluarController@storee');
+
+Route::get('/keluar/editt/{id}','KeluarController@editt');
+
+Route::post('/keluar/update','KeluarController@update');
+
+Route::get('/keluar/hapus/{id}','KeluarController@hapus');
 
 Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/logout', function () {
+  \Auth::logout();
+  return redirect('/home');
+});
 

@@ -10,31 +10,35 @@
  
 	<h3></h3>
  
-	<a href="/surat" class="btn btn-primary" style="margin-left:20px;"> Kembali</a>
+	<a href="/keluar" class="btn btn-primary" style="margin-left:20px;"> Kembali</a>
 	
 	<br/>
 	<br/>
 	<div class="card" style="width: 90%; margin: 0 auto;">
   <div class="card-body">
 	<table class="table table-striped">
-	<form action="/surat/store" method="post">
+	<form action="/keluar/storee" method="post">
 		{{ csrf_field() }}
 	<div class="mb-3">
 	<tr>
 		<td>No Surat </td>
-		<td><input type="text" name="kode" required="required" ></td>
+		<td><input type="text" name="kodee" required="required" ></td>
+	</tr>
+    <tr>
+		<td>Perihal </td>
+		<td><input type="text" name="perihal" required="required" ></td>
 	</tr>
 	<tr>
 		<td>Isi Ringkasa Surat </td>
-		<td><input type="text" name="isi" required="required" ></td>
+		<td><input type="text" name="isii" required="required" ></td>
 	</tr>
 	<tr>
-		<td>Asal </td>
-		<td><input type="text" name="asal" required="required" ></td>
+		<td>Asal Surat</td>
+		<td><input type="text" name="asall" required="required" ></td>
 	</tr>
 	<tr>
 		<td>tanggal </td>
-		<td><input type="date" name="tanggal" required="required" ></td>
+		<td><input type="date" name="tanggall" required="required" ></td>
 	</tr>
 	</div>
 		<input type="submit" value="Simpan Data"> 

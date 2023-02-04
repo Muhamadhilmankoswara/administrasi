@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
  
 class SuratController extends Controller
 {
+    
     public function index()
     {
     	// mengambil data dari table pegawai

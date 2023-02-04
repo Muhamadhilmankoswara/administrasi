@@ -252,11 +252,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard Surat Masuk</h1>
+            <h1 class="m-0">Dashboard Surat Keluar</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item active">Dashboard Surat Masuk</li>
+              <li class="breadcrumb-item active">Dashboard Surat Keluar</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -272,25 +272,27 @@
 	<br/>
   <div class="card" style="width: 90%; margin: 0 auto;">
   <div class="card-body">
-  <a href="surat/tambah" class="btn btn-success"> Tambah</a>
+  <a href="keluar/tambahh" class="btn btn-success"> Tambah</a>
 	<table class="table table-striped">
-		<tr>
+  <tr>
 			<th>No Surat</th>
+			<th>Perihal</th>
 			<th>Isi Ringkas Surat</th>
 			<th>Asal Surat</th>
 			<th>Tanggal Surat</th>
 			<th>Action</th>
 		</tr>
-		@foreach($surat_masuk as $p)
+		@foreach($surat_keluar as $p)
 		<tr>
-			<td>{{ $p->kode_agenda }}</td>
-			<td>{{ $p->isi_ringkassurat }}</td>
+			<td>{{ $p->no_surat }}</td>
+			<td>{{ $p->perihal }}</td>
+			<td>{{ $p->isi_ringkas_surat }}</td>
 			<td>{{ $p->asal_surat }}</td>
-			<td>{{ $p->Tgl_surat }}</td>
+            <td>{{ $p->tanggal_surat }}</td>
 			<td>
-				<a href="/surat/edit/{{ $p->kode_agenda }}">Edit</a>
+				<a href="/keluar/editt/{{ $p->no_surat }}">Edit</a>
 				<br>
-				<a href="/surat/hapus/{{ $p->kode_agenda }}">Hapus</a>
+				<a href="/keluar/hapus/{{ $p->no_surat }}">Hapus</a>
 			</td>
 		</tr>
 		@endforeach
