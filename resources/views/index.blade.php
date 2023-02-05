@@ -276,6 +276,7 @@
 	<table class="table table-striped">
 		<tr>
 			<th>No Surat</th>
+      <th>Perihal</th>
 			<th>Isi Ringkas Surat</th>
 			<th>Asal Surat</th>
 			<th>Tanggal Surat</th>
@@ -284,6 +285,7 @@
 		@foreach($surat_masuk as $p)
 		<tr>
 			<td>{{ $p->kode_agenda }}</td>
+      <td>{{ $p->perihal }}</td>
 			<td>{{ $p->isi_ringkassurat }}</td>
 			<td>{{ $p->asal_surat }}</td>
 			<td>{{ $p->Tgl_surat }}</td>

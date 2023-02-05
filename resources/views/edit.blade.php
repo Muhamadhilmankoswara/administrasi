@@ -21,8 +21,12 @@
 		<td><input type="hidden" name="kode" value="{{ $p->kode_agenda }}"></td>
 	</tr>
 	<tr>
+		<td>Perihal </td>
+		<td><input type="text" name="perihall" required="required" value="{{ $p->perihal }}"></td>
+	</tr>
+	<tr>
 		<td>Isi Ringkas Surat</td>
-		<td><input type="text" name="isi" required="required" value="{{ $p->isi_ringkassurat }}"></td>
+		<td><input type="textarea" name="isi" required="required" value="{{ $p->isi_ringkassurat }}"></td>
 	</tr>
 	<tr>
 		<td>Asal Surat</td>

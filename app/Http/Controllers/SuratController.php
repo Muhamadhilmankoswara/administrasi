@@ -34,6 +34,7 @@ class SuratController extends Controller
         // insert data ke table pegawai
         DB::table('surat_masuk')->insert([
             'kode_agenda' => $request->kode,
+            'perihal' => $request->perihall,
             'isi_ringkassurat' => $request->isi,
             'asal_surat' => $request->asal,
             'Tgl_surat' => $request->tanggal
@@ -59,6 +60,7 @@ class SuratController extends Controller
         // update data pegawai
         DB::table('surat_masuk')->where('kode_agenda',$request->kode)->update([
             'isi_ringkassurat' => $request->isi,
+                'perihal' => $request->perihall,
                 'asal_surat' => $request->asal,
                 'Tgl_surat' => $request->tanggal
         ]);
